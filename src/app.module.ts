@@ -3,6 +3,11 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { UsersModule } from './users/users.module';
+import { EmployeesModule } from './employees/employees.module';
+import { ProbationRecordsModule } from './probation-records/probation-records.module';
+import { EvaluationsModule } from './evaluations/evaluations.module';
+import { RegularizationDecisionsModule } from './regularization-decisions/regularization-decisions.module';
 
 @Module({
   imports: [
@@ -23,6 +28,16 @@ import { AppService } from './app.service';
         synchronize: false,
       }),
     }),
+
+    UsersModule,
+
+    EmployeesModule,
+
+    ProbationRecordsModule,
+
+    EvaluationsModule,
+
+    RegularizationDecisionsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
