@@ -12,8 +12,11 @@ import {
 import { CreateEmployeeDto } from './dto/create-employee.dto';
 import { UpdateEmployeeDto } from './dto/update-employee.dto';
 import { EmployeesService } from './employees.service';
+import { Roles } from '../auth/decorators/roles.decorator';
+import { UserRole } from '../users/entities/user.entity';
 
 @Controller('employees')
+@Roles(UserRole.HR_ADMIN)
 export class EmployeesController {
   constructor(private readonly employeesService: EmployeesService) {}
 

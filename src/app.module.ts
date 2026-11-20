@@ -8,6 +8,7 @@ import { EmployeesModule } from './employees/employees.module';
 import { ProbationRecordsModule } from './probation-records/probation-records.module';
 import { EvaluationsModule } from './evaluations/evaluations.module';
 import { RegularizationDecisionsModule } from './regularization-decisions/regularization-decisions.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -38,6 +39,8 @@ import { RegularizationDecisionsModule } from './regularization-decisions/regula
     EvaluationsModule,
 
     RegularizationDecisionsModule,
+
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
