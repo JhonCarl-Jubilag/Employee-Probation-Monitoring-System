@@ -1,0 +1,31 @@
+$kind: http-request
+url: http://localhost:3000/api/evaluations/3
+method: PATCH
+body:
+  type: json
+  content: "{\r
+
+    \  \"workQuality\": 2,\r
+
+    \  \"productivity\": 2,\r
+
+    \  \"attendance\": 3,\r
+
+    \  \"punctuality\": 3,\r
+
+    \  \"communication\": 2,\r
+
+    \  \"teamwork\": 3,\r
+
+    \  \"initiative\": 2,\r
+
+    \  \"comments\": \"Required improvements were not achieved during the extended probation period.\",\r
+
+    \  \"recommendation\": \"DO_NOT_REGULARIZE\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0l2t}}"
+order: 22000

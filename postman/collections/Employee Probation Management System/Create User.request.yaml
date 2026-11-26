@@ -1,0 +1,19 @@
+$kind: http-request
+url: http://localhost:3000/api/users
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"email\": \"{{new_user_email}}\",\r
+
+    \  \"password\": \"{{new_user_password}}\",\r
+
+    \  \"role\": \"SUPERVISOR\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_14s6}}\"
+order: 8000

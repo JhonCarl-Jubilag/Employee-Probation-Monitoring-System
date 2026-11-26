@@ -1,0 +1,13 @@
+# Use this workspace to collaborate
+workspace:
+  id: 9f5f392b-a1d2-4994-88ff-ff30a5bd6154
+
+localResources:
+  specs: []
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+cloudResources:
+  collections:
+    ../postman/collections/Employee Probation Management System: 60329941-339b3a68-632f-4178-a129-8a799ab2498e
+  globals:
+    ../postman/globals/workspace.globals.yaml: 0d075573-ac91-4d84-8612-cb4247f9e8bf

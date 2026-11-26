@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/employees
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0zgx}}"
+order: 2000

@@ -1,0 +1,15 @@
+$kind: http-request
+url: http://localhost:3000/api/probation-records/1
+method: PATCH
+body:
+  type: json
+  content: "{\r
+
+    \  \"expectedEndDate\": \"2026-11-20\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0u2d}}"
+order: 16000

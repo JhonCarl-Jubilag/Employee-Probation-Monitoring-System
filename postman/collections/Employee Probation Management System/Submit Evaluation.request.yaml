@@ -1,0 +1,8 @@
+$kind: http-request
+url: http://localhost:3000/api/evaluations/3/submit
+method: POST
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0l2t}}"
+order: 23000

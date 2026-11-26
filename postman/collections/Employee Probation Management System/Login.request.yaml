@@ -1,0 +1,13 @@
+$kind: http-request
+url: http://localhost:3000/api/auth/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"email\": \"{{hr_admin_email}}\",\r
+
+    \  \"password\": \"{{hr_admin_password}}\"\r
+
+    }"
+order: 1049

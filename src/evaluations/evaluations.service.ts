@@ -128,6 +128,7 @@ export class EvaluationsService {
   async findAll(actor: AuthenticatedUser): Promise<Evaluation[]> {
     return this.evaluationsRepository.find({
       where: this.scope(actor),
+      relations: { probationRecord: { employee: true }, supervisor: true },
       order: { id: 'DESC' },
     });
   }
@@ -135,6 +136,7 @@ export class EvaluationsService {
   async findOne(id: number, actor: AuthenticatedUser): Promise<Evaluation> {
     const evaluation = await this.evaluationsRepository.findOne({
       where: { ...this.scope(actor), id },
+      relations: { probationRecord: { employee: true }, supervisor: true },
     });
     if (!evaluation) {
       throw new NotFoundException('Evaluation not found');

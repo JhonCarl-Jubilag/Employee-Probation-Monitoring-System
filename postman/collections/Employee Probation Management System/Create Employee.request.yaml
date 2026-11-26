@@ -1,0 +1,27 @@
+$kind: http-request
+url: http://localhost:3000/api/employees
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"employeeNumber\": \"EXT-001\",\r
+
+    \  \"firstName\": \"Casey\",\r
+
+    \  \"lastName\": \"Flores\",\r
+
+    \  \"department\": \"Human Resources\",\r
+
+    \  \"position\": \"HR Assistant\",\r
+
+    \  \"dateHired\": \"2026-11-20\",\r
+
+    \  \"supervisorId\": 4\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0zgx}}"
+order: 1270

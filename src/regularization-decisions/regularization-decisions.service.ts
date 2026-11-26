@@ -185,6 +185,7 @@ export class RegularizationDecisionsService {
   async findAll(actor: AuthenticatedUser): Promise<RegularizationDecision[]> {
     return this.decisionsRepository.find({
       where: this.scope(actor),
+      relations: { probationRecord: { employee: true } },
       order: { id: 'DESC' },
     });
   }
@@ -195,6 +196,7 @@ export class RegularizationDecisionsService {
   ): Promise<RegularizationDecision> {
     const decision = await this.decisionsRepository.findOne({
       where: { ...this.scope(actor), id },
+      relations: { probationRecord: { employee: true } },
     });
     if (!decision) throw new NotFoundException('HR decision not found');
     return decision;
